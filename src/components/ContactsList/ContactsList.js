@@ -3,7 +3,7 @@ import {
   // selectContacts,
   // selectFilter,
   selectVisibleContacts,
-} from '../../redux/selectors';
+} from '../../redux/contacts/selectors';
 import { useSelector } from 'react-redux';
 
 // export const ContactsList = () => {

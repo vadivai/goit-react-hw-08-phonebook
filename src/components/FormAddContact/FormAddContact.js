@@ -1,9 +1,10 @@
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { Form, Field, FormGroup, Button } from './FormAddContact.styled';
+
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/operations';
-import { selectContacts } from '../../redux/selectors';
+import { addContact } from '../../redux/contacts/operations';
+import { selectContacts } from '../../redux/contacts/selectors';
+import { Button, Field, Form, FormGroup } from 'helpers/common.styled';
 
 const contactsValidation = Yup.object().shape({
   name: Yup.string().min(4, 'Too Short!').required('Required'),

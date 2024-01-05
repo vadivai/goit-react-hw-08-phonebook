@@ -1,16 +1,13 @@
-import { Wrapper } from 'components/ContactsList/ContactsList.styled';
-import { ContactsList } from 'components/ContactsList/ContactsList';
-import { FormAddContact } from 'components/FormAddContact/FormAddContact';
-import { Section } from './App.styled';
-import { Filter } from 'components/Filter/Filter';
 import { useDispatch } from 'react-redux';
 // import { selectContacts } from 'redux/selectors';
-import { fetchContacts } from '../../redux/operations';
+import { fetchContacts } from '../../redux/contacts/operations';
 import { useEffect } from 'react';
 import { ContactsPage } from 'pages/ContactsPage';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from 'components/Layout/Layout';
 import { HomePage } from 'pages/HomePage';
+import { RegistrationPage } from 'pages/RegistrationPage';
+import { LoginPage } from 'pages/LoginPage';
 
 export const App = () => {
   // const contacts = useSelector(selectContacts);
@@ -19,6 +16,8 @@ export const App = () => {
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
+
+  // Добавь компонент навигации Navigation со ссылками для перехода по маршрутам.
 
   return (
     <Routes>
@@ -36,6 +35,8 @@ export const App = () => {
         <RestrictedRoute redirectTo="/tasks" component={<LoginPage />} />
       }
     /> */}
+        <Route path="/register" element={<RegistrationPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route
           path="/contacts"
           element={<ContactsPage />}

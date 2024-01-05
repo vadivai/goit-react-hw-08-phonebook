@@ -12,13 +12,13 @@ export const Layout = () => {
               <NavLinkStyled to="/">Home</NavLinkStyled>
             </li>
             <li>
+              <NavLinkStyled to="/register">Registration</NavLinkStyled>
+            </li>
+            <li>
+              <NavLinkStyled to="/login">Login</NavLinkStyled>
+            </li>
+            <li>
               <NavLinkStyled to="/contacts">Contacts</NavLinkStyled>
-            </li>
-            <li>
-              <NavLinkStyled to="/contacts">Registration</NavLinkStyled>
-            </li>
-            <li>
-              <NavLinkStyled to="/contacts">Login</NavLinkStyled>
             </li>
           </NavList>
         </nav>

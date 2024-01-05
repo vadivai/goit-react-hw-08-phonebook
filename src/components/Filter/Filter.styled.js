@@ -1,15 +1,11 @@
 import styled from 'styled-components';
-import {
-  Form as FormikForm,
-  Field as FormikField,
-  ErrorMessage as FormikError,
-} from 'formik';
+import { Form as FormikForm, Field as FormikField } from 'formik';
 
 export const Form = styled(FormikForm)`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  max-width: 280px;
+  max-width: 320px;
 `;
 
 export const Field = styled(FormikField)`
@@ -24,11 +20,6 @@ export const FormGroup = styled.label`
   display: flex;
   flex-direction: column;
   gap: 6px;
-`;
-
-export const ErrorMessage = styled(FormikError)`
-  color: red;
-  font-size: 14px;
 `;
 
 export const Button = styled.button`

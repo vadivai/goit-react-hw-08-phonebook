@@ -2,11 +2,33 @@ import styled from 'styled-components';
 
 import { Form as FormikForm, Field as FormikField } from 'formik';
 
+export const PageWrapper = styled.div`
+  display: flex;
+`;
+
+export const SectionHome = styled.div`
+  padding: 10px 20px;
+  background-color: orange;
+  width: 100vw;
+  height: 100vh;
+
+  color: #000;
+`;
+
+export const Section = styled.section`
+  padding: 10px 50px 20px;
+  background-color: orange;
+  color: #000;
+  width: 50vw;
+  height: 60vh;
+  margin: auto;
+`;
+
 export const Form = styled(FormikForm)`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  max-width: 280px;
+  /* max-width: 280px; */
 `;
 
 export const Field = styled(FormikField)`
