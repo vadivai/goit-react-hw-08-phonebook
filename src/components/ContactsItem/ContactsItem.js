@@ -4,7 +4,6 @@ import { deleteContact } from '../../redux/operations';
 
 export const ContactsItem = ({ item: { id, name, phone } }) => {
   const dispatch = useDispatch();
-  console.log('item phone', phone);
   return (
     <LiItem>
       <span>

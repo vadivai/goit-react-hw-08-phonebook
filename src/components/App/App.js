@@ -7,6 +7,10 @@ import { useDispatch } from 'react-redux';
 // import { selectContacts } from 'redux/selectors';
 import { fetchContacts } from '../../redux/operations';
 import { useEffect } from 'react';
+import { ContactsPage } from 'pages/ContactsPage';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from 'components/Layout/Layout';
+import { HomePage } from 'pages/HomePage';
 
 export const App = () => {
   // const contacts = useSelector(selectContacts);
@@ -17,18 +21,27 @@ export const App = () => {
   }, [dispatch]);
 
   return (
-    <>
-      <Section>
-        <h2>Phonebook</h2>
-        <FormAddContact />
-      </Section>
-      <Section>
-        <h3>Contacts</h3>
-        <Filter />
-        <Wrapper>
-          <ContactsList>ContactsList</ContactsList>
-        </Wrapper>
-      </Section>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        {/* <Route
+      path="/register"
+      element={
+        <RestrictedRoute redirectTo="/tasks" component={<RegisterPage />} />
+      }
+    /> */}
+        {/* <Route
+      path="/login"
+      element={
+        <RestrictedRoute redirectTo="/tasks" component={<LoginPage />} />
+      }
+    /> */}
+        <Route
+          path="/contacts"
+          element={<ContactsPage />}
+          // element={<PrivateRoute redirectTo="/login" component={<TasksPage />} />}
+        />
+      </Route>
+    </Routes>
   );
 };
