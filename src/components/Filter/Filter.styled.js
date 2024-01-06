@@ -5,7 +5,7 @@ export const Form = styled(FormikForm)`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  max-width: 320px;
+  max-width: 400px;
 `;
 
 export const Field = styled(FormikField)`
@@ -24,7 +24,7 @@ export const FormGroup = styled.label`
 
 export const Button = styled.button`
   /* display: block; */
-  max-width: 100px;
+  min-width: 100px;
   padding: 8px 8px;
   color: white;
   background-color: teal;

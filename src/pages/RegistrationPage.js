@@ -1,11 +1,18 @@
 import { Formik } from 'formik';
-import { Button, Field, Form, FormGroup, Section } from 'helpers/common.styled';
+import {
+  Button,
+  Field,
+  Form,
+  FormGroup,
+  Section,
+  Text,
+} from 'helpers/common.styled';
 
 export const RegistrationPage = () => {
   return (
     <>
       <Section>
-        <h2 style={{ textAlign: 'center' }}>Registration</h2>
+        <Text>Registration</Text>
         <Formik
           initialValues={{
             login: '',

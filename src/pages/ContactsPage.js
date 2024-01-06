@@ -1,20 +1,21 @@
-import { ContactsList } from 'components/ContactsList/ContactsList';
-import { Wrapper } from 'components/ContactsList/ContactsList.styled';
-import { Filter } from 'components/Filter/Filter';
-import { FormAddContact } from 'components/FormAddContact/FormAddContact';
-import { PageWrapper, Section } from 'helpers/common.styled';
+import { ContactsList } from 'components';
+import { Filter } from 'components';
+import { FormAddContact } from 'components';
+import { PageWrapper, Section, Text, Wrapper } from 'helpers/common.styled';
 
 export const ContactsPage = () => {
   return (
     <PageWrapper>
       <Section>
-        <h2 style={{ textAlign: 'center' }}>Phonebook</h2>
+        {/* <Wrapper> */}
+        <Text>Phonebook</Text>
         <FormAddContact />
+        {/* </Wrapper> */}
       </Section>
       <Section>
-        <h3>Contacts</h3>
-        <Filter />
         <Wrapper>
+          <Text>Contacts</Text>
+          <Filter />
           <ContactsList>ContactsList</ContactsList>
         </Wrapper>
       </Section>

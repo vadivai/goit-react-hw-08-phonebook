@@ -4,10 +4,16 @@ import { fetchContacts } from '../../redux/contacts/operations';
 import { useEffect } from 'react';
 import { ContactsPage } from 'pages/ContactsPage';
 import { Route, Routes } from 'react-router-dom';
-import { Layout } from 'components/Layout/Layout';
+import { Layout } from 'components';
 import { HomePage } from 'pages/HomePage';
 import { RegistrationPage } from 'pages/RegistrationPage';
 import { LoginPage } from 'pages/LoginPage';
+
+
+// const HomePage = lazy(() => import('../pages/Home'));
+// const RegisterPage = lazy(() => import('../pages/Register'));
+// const LoginPage = lazy(() => import('../pages/Login'));
+// const TasksPage = lazy(() => import('../pages/Tasks'));
 
 export const App = () => {
   // const contacts = useSelector(selectContacts);

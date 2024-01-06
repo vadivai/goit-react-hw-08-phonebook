@@ -1,4 +1,4 @@
-import { ContactsItem } from 'components/ContactsItem/ContactsItem';
+import { ContactsItem } from 'components';
 import {
   // selectContacts,
   // selectFilter,

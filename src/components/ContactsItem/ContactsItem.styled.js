@@ -4,6 +4,6 @@ export const LiItem = styled.li`
   display: flex;
   /* gap: 10px; */
   justify-content: space-between;
-  max-width: 300px;
+  max-width: 350px;
   padding: 2px;
 `;

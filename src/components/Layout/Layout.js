@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { Container, NavLinkStyled, NavList } from './Layout.styled';
+import { Container, NavLinkStyled, NavList } from 'components';
 import { Suspense } from 'react';
 
 export const Layout = () => {
@@ -8,18 +8,10 @@ export const Layout = () => {
       <header>
         <nav>
           <NavList>
-            <li>
-              <NavLinkStyled to="/">Home</NavLinkStyled>
-            </li>
-            <li>
-              <NavLinkStyled to="/register">Registration</NavLinkStyled>
-            </li>
-            <li>
-              <NavLinkStyled to="/login">Login</NavLinkStyled>
-            </li>
-            <li>
-              <NavLinkStyled to="/contacts">Contacts</NavLinkStyled>
-            </li>
+            <NavLinkStyled to="/">Home</NavLinkStyled>
+            <NavLinkStyled to="/register">Registration</NavLinkStyled>
+            <NavLinkStyled to="/login">Login</NavLinkStyled>
+            <NavLinkStyled to="/contacts">Contacts</NavLinkStyled>
           </NavList>
         </nav>
       </header>

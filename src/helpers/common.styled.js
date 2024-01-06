@@ -6,29 +6,54 @@ export const PageWrapper = styled.div`
   display: flex;
 `;
 
-export const SectionHome = styled.div`
-  padding: 10px 20px;
-  background-color: orange;
-  width: 100vw;
-  height: 100vh;
+// export const SectionHome = styled.div`
+//   padding: 10px 20px;
+//   background-color: orange;
+//   width: 100vw;
+//   height: 100vh;
 
-  color: #000;
-`;
+//   color: #000;
+// `;
 
 export const Section = styled.section`
-  padding: 10px 50px 20px;
+  padding: 10px 10px;
   background-color: orange;
   color: #000;
   width: 50vw;
-  height: 60vh;
-  margin: auto;
+  min-height: 70vh;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* padding-left: 20px; */
+  /* margin-left: 20px; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+
+  /* list-style:  */
+`;
+
+export const Text = styled.h2`
+  text-align: center;
+  font-size: 20px;
+  padding: 8px;
 `;
 
 export const Form = styled(FormikForm)`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  /* max-width: 280px; */
+  max-width: 400px;
+  /* max-height: 450px; */
 `;
 
 export const Field = styled(FormikField)`
@@ -52,4 +77,5 @@ export const Button = styled.button`
   color: white;
   background-color: teal;
   border: 0;
+  align-self: center;
 `;
