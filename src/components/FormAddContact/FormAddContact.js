@@ -8,7 +8,7 @@ import { Button, Field, Form, FormGroup } from 'helpers/common.styled';
 
 const contactsValidation = Yup.object().shape({
   name: Yup.string().min(4, 'Too Short!').required('Required'),
-  phone: Yup.string().min(7, 'At least 7').required('Required'),
+  number: Yup.string().min(7, 'At least 7').required('Required'),
 });
 
 export const FormAddContact = () => {
@@ -19,7 +19,7 @@ export const FormAddContact = () => {
     <Formik
       initialValues={{
         name: '',
-        phone: '',
+        number: '',
       }}
       validationSchema={contactsValidation}
       onSubmit={(values, actions) => {
@@ -27,7 +27,7 @@ export const FormAddContact = () => {
           contacts.find(
             contact =>
               contact.name.toLowerCase() === values.name.toLowerCase() &&
-              contact.phone === values.phone
+              contact.number === values.number
           )
         ) {
           return alert(
@@ -44,8 +44,8 @@ export const FormAddContact = () => {
           <Field type="text" name="name" placeholder="Введіть ім'я" />
         </FormGroup>
         <FormGroup>
-          Phone
-          <Field type="tel" name="phone" placeholder="Введіть телефон" />
+          Number
+          <Field type="tel" name="number" placeholder="Введіть телефон" />
           <Button type="submit">Add contact</Button>
         </FormGroup>
       </Form>

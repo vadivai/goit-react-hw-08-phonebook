@@ -4,7 +4,8 @@ export const selectContacts = state => state.cont.items;
 
 export const selectFilter = state => state.filt;
 
-// 2 вариант
+export const selectLoading = state => state.cont.loading;
+
 export const selectVisibleContacts = createSelector(
   [selectContacts, selectFilter],
   (contacts, filter) => {
