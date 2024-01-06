@@ -1,13 +1,13 @@
-import { NavLinkStyled } from 'components/Layout/Layout.styled';
+import { Nav, NavLinkStyled } from 'components/Layout/Layout.styled';
 import { useAuth } from 'hooks/useAuth';
 
 export const Navigation = () => {
-  const { isLoggedIn } = useAuth();
+  // const { isLoggedIn } = useAuth();
 
   return (
-    <nav>
+    <Nav>
       <NavLinkStyled to="/">Home</NavLinkStyled>
-      {isLoggedIn && <NavLinkStyled to="/contacts">Contacts</NavLinkStyled>}
-    </nav>
+      {<NavLinkStyled to="/contacts">Contacts</NavLinkStyled>}
+    </Nav>
   );
 };

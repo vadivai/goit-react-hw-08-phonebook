@@ -5,7 +5,7 @@ export const Container = styled.div`
   padding: 10px 20px;
 `;
 
-export const NavList = styled.ul`
+export const Nav = styled.nav`
   display: flex;
   gap: 30px;
   list-style: none;
