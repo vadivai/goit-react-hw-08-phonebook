@@ -9,13 +9,14 @@ import { selectLoading } from '../redux/contacts/selectors';
 
 export default function ContactsPage() {
   const dispatch = useDispatch();
-  // const isLoading = useSelector(selectLoading);
+  const isLoading = useSelector(selectLoading);
 
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
   return (
     <PageWrapper>
+      <div>{isLoading && 'Request in progress...'}</div>
       <Section>
         {/* <Wrapper> */}
         <Text>Phonebook</Text>
