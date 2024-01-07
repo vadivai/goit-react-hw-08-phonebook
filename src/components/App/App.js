@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-// import { selectContacts } from 'redux/selectors';
 import { lazy, useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from 'components';
@@ -42,12 +41,11 @@ export const App = () => {
             <RestrictedRoute element={<LoginPage />} redirectTo="/contacts" />
           }
         />
-        {/* <Route path="/register" element={<RegistrationPage />} />
-        <Route path="/login" element={<LoginPage />} /> */}
         <Route
           path="/contacts"
-          element={<ContactsPage />}
-          // element={<PrivateRoute element={<ContactsPage />} redirectTo="/login" />}
+          element={
+            <PrivateRoute element={<ContactsPage />} redirectTo="/login" />
+          }
         />
       </Route>
       <Route path="*" element={<Navigate to="/" />} />

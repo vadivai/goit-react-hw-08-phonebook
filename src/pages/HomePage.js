@@ -1,15 +1,23 @@
-import { Section, Text } from 'helpers/common.styled';
-// import { Button, FormGroup, Form, Field } from '../helpers/common.styled.js';
-// import { Formik } from 'formik';
+import { BlueText, Paragraph, Section, Wrapper } from 'helpers/common.styled';
 
 export default function HomePage() {
   return (
     <>
       <Section>
-        <Text>Home</Text>
-        <p style={{ textAlign: 'center', margin: 'auto' }}>
-          Головна сторінка сайту!
-        </p>
+        <Wrapper>
+          <Paragraph>Добрий день, друже! </Paragraph>
+          <Paragraph>
+            Це <BlueText>база контактів Phonebook</BlueText> для особистого
+            використання. Пройдіть реєстрацію або залогуйтеся.
+          </Paragraph>
+          <Paragraph>
+            Ви можете <BlueText>додати/видалити</BlueText> та{' '}
+            <BlueText>відфільтрувати</BlueText> свої контакти.
+          </Paragraph>
+          <Paragraph>
+            Для підтримки тицніть <a href="support@phonebook.ua">сюди</a>{' '}
+          </Paragraph>
+        </Wrapper>
       </Section>
     </>
   );

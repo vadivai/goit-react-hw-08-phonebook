@@ -18,10 +18,8 @@ export default function ContactsPage() {
     <PageWrapper>
       <div>{isLoading && 'Request in progress...'}</div>
       <Section>
-        {/* <Wrapper> */}
         <Text>Phonebook</Text>
         <FormAddContact />
-        {/* </Wrapper> */}
       </Section>
       <Section>
         <Wrapper>

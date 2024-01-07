@@ -5,7 +5,7 @@ const filterSlice = createSlice({
   initialState: '',
   reducers: {
     filteredContacts(state, { payload }) {
-      return payload; // связь со state, почему неактивен
+      return payload;
     },
   },
 });

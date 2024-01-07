@@ -35,9 +35,7 @@ export const Wrapper = styled.div`
   /* align-items: flex-start; */
   /* padding-left: 20px; */
   /* margin-left: 20px; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: center;
 
   /* list-style:  */
 `;
@@ -46,6 +44,19 @@ export const Text = styled.h2`
   text-align: center;
   font-size: 20px;
   padding: 8px;
+`;
+
+export const BlueText = styled.span`
+  font-weight: 600;
+  font-size: ingerit;
+  font-style: italic;
+  color: #10066b;
+`;
+
+export const Paragraph = styled.p`
+  /* style={{ textAlign: 'center', margin: 'auto' }} */
+  text-align: center;
+  padding: 10px;
 `;
 
 export const Form = styled(FormikForm)`

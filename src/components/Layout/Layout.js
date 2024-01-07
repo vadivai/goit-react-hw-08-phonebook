@@ -8,8 +8,8 @@ export const Layout = () => {
     <Container>
       <AppBar />
       <main>
-        <Suspense fallback={<div>Loading Layout...</div>}>
-          {/* сделать null */}
+        <Suspense fallback={<div>Loading, please wait...</div>}>
+          {/* сделать null? */}
           <Outlet />
         </Suspense>
       </main>

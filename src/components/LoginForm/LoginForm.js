@@ -9,7 +9,6 @@ export const LoginForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
-    // console.log('form', form);
     dispatch(
       logIn({
         email: form.elements.email.value,
@@ -18,7 +17,7 @@ export const LoginForm = () => {
     );
     // console.log('email', form.elements.email.value);
     // console.log('password', form.elements.password.value);
-    form.reset(); 
+    form.reset();
   };
 
   return (
@@ -31,7 +30,7 @@ export const LoginForm = () => {
     >
       <Form onSubmit={handleSubmit}>
         <FormGroup>
-          Login/email
+          Email
           <Field type="email" name="email" placeholder="Введіть логін/email" />
         </FormGroup>
         <FormGroup>

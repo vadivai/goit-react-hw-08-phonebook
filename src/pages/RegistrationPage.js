@@ -5,7 +5,7 @@ export default function RegistrationPage() {
   return (
     <>
       <Section>
-        <Text>Registration</Text>
+        <Text>Registration Form</Text>
         <RegistrationForm />
       </Section>
     </>
